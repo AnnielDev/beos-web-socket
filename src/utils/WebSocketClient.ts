@@ -53,11 +53,11 @@ export class WebSocketClient {
       this.ws = null;
     };
   }
-  setPath(path: string, query = null) {
-    const base = this.baseUrl.replace(/\/$/, "");
-    const route = path.startsWith("/") ? path : `/${path}`;
-    this.url = this.buildUrl(base + route, query || this.query);
-  }
+  // setPath(path: string, query = null) {
+  //   const base = this.baseUrl.replace(/\/$/, "");
+  //   const route = path.startsWith("/") ? path : `/${path}`;
+  //   this.url = this.buildUrl(base + route, query || this.query);
+  // }
 
   send(data: any): void {
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
